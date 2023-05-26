@@ -1,7 +1,11 @@
+const BaseModel = require("./BaseModel");
+
 class UserModel extends BaseModel{
    
     constructor(){
-        super('user') //permet de passer le parent
+        super('player') //permet de passer le parent
     }
     
 }
+
+module.exports = UserModel;
