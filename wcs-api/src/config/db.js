@@ -1,11 +1,9 @@
 const mysql = require('mysql2/promise');
+require ('dotenv').config();
 
-const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME } = {
-    DB_HOST: 'localhost',
-    DB_USER:'root',
-    DB_PASSWORD: '',
-    DB_NAME: 'wild_db_quest'
-};
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
+
+//console.log(DB_HOST, DB_USER);
 
 const db = mysql.createPool({
   host: DB_HOST,
