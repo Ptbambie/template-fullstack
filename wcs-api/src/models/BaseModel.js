@@ -1,5 +1,7 @@
 const { db } = require("../config");
 
+//parents
+
 class BaseModel{
     table; // déclarations des valeurs NORME et + LISIBLE
     db;

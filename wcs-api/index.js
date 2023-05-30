@@ -3,7 +3,7 @@ const { userRouter } = require('./src/routes');
 const app = express();
 
 
-app.use(express.json()); //elle transforme les donnée en .json
+app.use(express.json()); //elle transforme les données en .json
 
 const APIRouter = express.Router();
 
