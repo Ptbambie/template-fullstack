@@ -1,5 +1,5 @@
 const express = require('express');
-const { userRouter } = require('./src/routes');
+const { userRouter, schoolRouter } = require('./src/routes');
 const app = express();
 
 
@@ -14,6 +14,7 @@ APIRouter.get('/version', function(req,res) {
 })
 
 APIRouter.use('/users', userRouter);
+APIRouter.use('/school', schoolRouter);
 app.use('/api', APIRouter);
 
 app.listen(8080, function(){
