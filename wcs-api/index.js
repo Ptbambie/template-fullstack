@@ -1,8 +1,9 @@
 const express = require('express');
+const { userRouter, schoolRouter } = require('./src/routes');
 const app = express();
 
 
-app.use(express.json()); //elle transforme les donnée en .json
+app.use(express.json()); //elle transforme les données en .json
 
 const APIRouter = express.Router();
 
@@ -12,7 +13,8 @@ APIRouter.get('/version', function(req,res) {
      return res.json({version})
 })
 
-
+APIRouter.use('/users', userRouter);
+APIRouter.use('/school', schoolRouter);
 app.use('/api', APIRouter);
 
 app.listen(8080, function(){
